@@ -1,0 +1,8 @@
+{
+  "name": "Remix plugOFF final",
+  "description": "Feature-driven React e-commerce architecture with rate-limiting, edge security, and shopping cart workflow.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

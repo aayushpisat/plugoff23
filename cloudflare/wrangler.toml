@@ -1,0 +1,22 @@
+name = "aero-store-rate-limiter"
+main = "rate-limiter-worker.js"
+compatibility_date = "2024-04-01"
+
+[vars]
+ENVIRONMENT = "production"
+MAX_REQUESTS_PER_MINUTE = "60"
+AUTH_MAX_REQUESTS_PER_MINUTE = "5"
+CONTACT_MAX_REQUESTS_PER_MINUTE = "3"
+CHECKOUT_MAX_REQUESTS_PER_MINUTE = "10"
+
+# Cloudflare Rate Limiting binding
+# [[unsafe.bindings]]
+# name = "RATE_LIMITER"
+# type = "ratelimit"
+# namespace_id = "1001"
+# simple = { limit = 60, period = 60 }
+
+[env.production]
+routes = [
+  { pattern = "api.aerostore.com/*", zone_name = "aerostore.com" }
+]
